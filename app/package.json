@@ -21,6 +21,8 @@
   "devDependencies": {
     "@babel/core": "^7.18.9",
     "@babel/preset-env": "^7.18.9",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
@@ -35,6 +37,9 @@
     "webpack-dev-server": "^4.9.3"
   },
   "dependencies": {
-    "css-loader": "^6.7.1"
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^6.7.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }

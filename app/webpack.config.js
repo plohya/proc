@@ -25,9 +25,16 @@ module.exports = {
                 use: ['style-loader', 'css-loader', 'sass-loader']
             },
             {
-                test: /\.js$/,
+                test: /\.jsx?$/,
                 exclude: /node_modules/,
-                use: ["babel-loader"]
+                use: [
+                    {
+                        loader: "babel-loader",
+                        options: {
+                            presets: ['react']
+                        }
+                    }
+                ],
             },
             {
                 test: /\.tsx?$/,
@@ -42,7 +49,7 @@ module.exports = {
         })
     ],
     devServer: {  // configuration for webpack-dev-server
-        static: './src/view',  //source of static assets
+        static: './app/src/view',  //source of static assets
         port: 5555, // port to run dev-server
     }
 };
